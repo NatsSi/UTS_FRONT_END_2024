@@ -1,0 +1,578 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:cursive;
+  }
+  
+  body {
+    background-color: #fff;
+    line-height: 1.5;
+  }
+  
+  .nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1% 9% 1% 9%;
+    align-items: center;
+  }
+  
+  .hamburger {
+    display: none;
+  }
+  
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: #101010;
+  }
+  
+  .logo h1 {
+    font-size: 24px;
+    color: #5b6d38;
+  }
+
+  .logo a {
+    text-decoration: none;
+  }
+  
+  
+  nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+  }
+  
+  nav ul li {
+    font-size: 18px;
+  }
+  
+  nav ul li a {
+    text-decoration: none;
+    color: #333;
+  }
+  
+  nav ul li .subscribe {
+    padding: 8px 15px;
+    background-color: #3a5233;
+    color: #fff;
+    border-radius: 5px;
+  }
+
+  .container-one {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f8f8f8;
+    padding: 5% 9% 5% 9%;
+    border-radius: 10px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .text-content {
+      max-width: 60.5%;
+  }
+
+  .text-content h1 {
+      font-size: 3rem;
+      color: #425126;
+      margin-bottom: 20px;
+  }
+
+  .text-content p {
+      font-size: 1.2rem;
+      line-height: 1.5;
+      color: #3c4a28;
+  }
+
+  .container-one .image-content {
+      position: relative;
+  }
+
+  .container-one .image-content img {
+    max-height: 400px;
+    min-height: 300px;
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+  }
+
+  .retirement-label {
+      position: relative;
+      top: 45px;
+      width:100%;
+      height: 45px;
+      align-items: self-start;
+      background-color: #859254;
+      padding: 10px 20px;
+      border-radius: 10px;
+      color: white;
+      font-weight: bold;
+      font-size: 1rem;
+  } 
+
+  .container-two {
+    position: relative;
+    padding: 5% 9% 5% 9%;
+  }
+
+  .header-one {
+    margin-bottom: 50px;
+  }
+
+  .header-one h1 {
+    font-size: 3rem;
+    color: #425126;
+    margin-bottom: 20px;
+  }
+
+  .header-one p {
+    font-size: 1.2rem;
+    color: #5f6e3c;
+  }
+
+  .highlight-text {
+    font-size: 1.2rem;
+    color: #7a8a56;
+    text-transform: uppercase;
+    font-weight: bold;
+    margin-bottom: 10px;
+  }
+
+  .slider {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #f7f8f4;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+  }
+
+  .card {
+    display: none;
+      flex: 1;
+      padding: 20px;
+      transition: opacity 0.5s ease;
+  }
+
+  .active-slide {
+      display: flex;
+      opacity: 1;
+  }
+
+  .course-info {
+    flex: 1;
+    margin: auto;
+    width: 50%;
+    max-width: 700px;
+    text-align: center;
+    padding-left: 5%;
+  }
+
+  .course-info .icon {
+      font-size: 2em;
+      color: #4d6130;
+      margin-bottom: 10px;
+  }
+
+  .course-info h2 {
+      color: #394f33;
+      font-size: 1.8em;
+      margin-bottom: 10px;
+  }
+
+  .course-info .duration {
+      justify-content: center;
+      display: flex;
+      align-items: center;
+      color: #4d6130;
+      margin-bottom: 10px;
+  }
+
+  .course-info .clock-icon {
+      margin-right: 5px;
+  }
+
+  .course-info p {
+      color: #6f7e5c;
+      font-size: 1.2em;
+      margin-bottom: 20px;
+  }
+
+  .access-course {
+      background-color: #4d6130;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 5px;
+  }
+
+  .container-two .image-content {
+    align-self: center;
+    flex: 1;
+    padding-left: 20px;
+  }
+
+  .container-two .image-content img {
+    width: 100%;
+    max-width: 600px;
+    min-height: 200px;
+    max-height: 300px;
+    border-radius: 10px;
+  }
+
+  /* Navigation buttons */
+  .prev, .next {
+    background-color: #425126;
+    cursor: pointer;
+    position: absolute;
+    padding: 10px;
+    margin-top: -22px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+    transition: 0.6s ease;
+  }
+
+  .next {
+    right: 1%;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .prev {
+    left: 1%;
+    border-radius: 3px 0 0 3px;
+  }
+
+  .prev:hover, .next:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  .navigation {
+      display: flex;
+      justify-content: center;
+      margin-top: 20px;
+  }
+
+  .dot {
+      height: 12px;
+      width: 12px;
+      background-color: #c4c4c4;
+      border-radius: 50%;
+      margin: 0 5px;
+      cursor: pointer;
+  }
+
+  .dot.active {
+      background-color: #4d6130;
+  }
+
+  .container-three {
+    padding: 5% 9% 5% 9%;
+  }
+
+  .header-two {
+      margin-bottom: 50px;
+  }
+
+  .header-two h1 {
+      font-size: 3rem;
+      color: #425126;
+      margin-bottom: 20px;
+  }
+
+  .header-two p {
+      font-size: 1.2rem;
+      color: #5f6e3c;
+  }
+
+  .highlight-text {
+      font-size: 1.2rem;
+      color: #7a8a56;
+      text-transform: uppercase;
+      font-weight: bold;
+      margin-bottom: 10px;
+  }
+
+  .event-cards {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+  }
+
+  .event-card {
+      background-color: #fff;
+      border-radius: 20px;
+      box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+      overflow: hidden;
+      width: 30%;
+      position: relative;
+  }
+
+  .event-card img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+  }
+
+  .event-info {
+      padding: 20px;
+  }
+
+  .event-date {
+      background-color: #5f6e3c;
+      color: white;
+      padding: 5px 15px;
+      border-radius: 20px;
+      font-size: 1rem;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      display: flex;
+      align-items: center;
+  }
+
+  .event-date img {
+      width: 16px;
+      height: 16px;
+      margin-right: 5px;
+  }
+
+  .event-category {
+      font-size: 1rem;
+      background-color: #c2c89a;
+      padding: 5px 15px;
+      border-radius: 20px;
+      color: #425126;
+      margin-bottom: 10px;
+  }
+
+  .event-title {
+      font-size: 1.5rem;
+      color: #425126;
+      margin-bottom: 10px;
+  }
+
+  .event-description {
+      font-size: 1rem;
+      color: #5f6e3c;
+      margin-bottom: 20px;
+  }
+
+  .btn {
+      padding: 12px 20px;
+      border: 2px solid #425126;
+      background-color: transparent;
+      border-radius: 25px;
+      font-size: 1rem;
+      color: #425126;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      text-decoration: none;
+      transition: 0.3s;
+  }
+
+  .btn:hover {
+      background-color: #425126;
+      color: white;
+  }
+
+  .btn img {
+      width: 18px;
+      height: 18px;
+      margin-left: 10px;
+  }
+
+  footer {
+    text-align: center;
+    padding: 2% 0% 2% 0%;
+    margin-top: 50px;
+    background-color: #3c492d;
+  }
+  
+  footer h2 {
+    color: #ffffff;
+    margin-bottom: 20px;
+    font-size: 1.5rem;
+  }
+  
+  footer nav a {
+    color: greenyellow;
+    margin: 0 10px;
+    text-decoration: none;
+    font-size: 1rem;
+  }
+  
+  footer p {
+    color: greenyellow;
+    margin-top: 20px;
+    font-size: 0.9rem;
+  }
+
+  .appear {
+    transition: all 0.8s;
+    opacity: 0;
+    transform: translateY(20px);
+  
+    &.inview {
+        opacity: 1;
+        transform: none;
+        @for $i from 1 through 2 {
+          &:nth-child(#{$i}) {
+            transition-delay: $i * 0.2s;
+        }
+      }
+    }
+  }
+  
+  .appear2 {
+    transition: all 0.8s;
+    opacity: 0;
+    transform: translateY(20px);
+  
+    &.inview2 {
+        opacity: 1;
+        transform: none;
+        @for $i from 1 through 3 {
+          &:nth-child(#{$i}) {
+            transition-delay: $i * 0.2s;
+        }
+      }
+    }
+  }
+  
+  .appear3 {
+    transition: all 0.8s;
+    opacity: 0;
+    transform: translateY(20px);
+  
+    &.inview3 {
+        opacity: 1;
+        transform: none;
+        @for $i from 1 through 2 {
+          &:nth-child(#{$i}) {
+            transition-delay: $i * 0.2s;
+        }
+      }
+    }
+  }
+  
+  .appear4 {
+    transition: all 0.8s;
+    opacity: 0;
+    transform: translateY(20px);
+  
+    &.inview4 {
+        opacity: 1;
+        transform: none;
+        @for $i from 1 through 3 {
+          &:nth-child(#{$i}) {
+            transition-delay: $i * 0.2s;
+        }
+      }
+    }
+  }
+  
+  .appear5 {
+    transition: all 0.8s;
+    opacity: 0;
+    transform: translateY(20px);
+  
+    &.inview5 {
+        opacity: 1;
+        transform: none;
+        @for $i from 1 through 3 {
+          &:nth-child(#{$i}) {
+            transition-delay: $i * 0.2s;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 768px) {
+    .nav ul {
+      position: fixed;
+      left: -100%;
+      top: 40px;
+      flex-direction: column;
+      background-color: #fff;
+      width: 100%;
+      border-radius: 10px;
+      text-align: center;
+      transition: 0.3s;
+      box-shadow:
+          0 10px 27px rgba(0, 0, 0, 0.05);
+      padding-bottom: 40px;
+    }
+  
+    .nav ul.active {
+        left: 0;
+    }
+  
+    .nav li {
+        margin: 0.05rem 0;
+    }
+  
+    .hamburger {
+        display: block;
+        cursor: pointer;
+    }
+  
+    .hamburger.active .bar:nth-child(2) {
+      opacity: 0;
+    }
+  
+    .hamburger.active .bar:nth-child(1) {
+        transform: translateY(8px) rotate(45deg);
+    }
+  
+    .hamburger.active .bar:nth-child(3) {
+        transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .container-one {
+      flex-direction: column;
+    }
+
+    .text-content {
+      max-width: 100%;
+    }
+
+    .container-one .image-content img {
+      max-height: 500px;
+      min-height: 300px;
+      width: 100%;
+      border-radius: 10px;
+      object-fit: cover;
+    }
+
+    .image-content {
+      padding-left: 0px;
+    }
+
+    .card {
+      flex-direction: column;
+    }
+
+    .course-info {
+      width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .event-cards {
+      flex-direction: column;
+    }
+
+    .event-card {
+      width: 100%;
+    }
+  }  
