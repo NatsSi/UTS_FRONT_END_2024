@@ -153,6 +153,7 @@ body {
     border: 1px solid #ececec;
     margin: 20px;
     border-radius: 20px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
 }
 
 .blog-img {
@@ -209,6 +210,22 @@ body {
     color:#8cb143;
     transition: all ease 0.2s
 }
+
+.appear {
+    transition: all 0.8s;
+    opacity: 0;
+    transform: translateY(20px);
+  
+    &.inview {
+        opacity: 1;
+        transform: none;
+        @for $i from 1 through 2 {
+          &:nth-child(#{$i}) {
+            transition-delay: $i * 0.2s;
+        }
+      }
+    }
+  }
 
 /* Animations */
 
