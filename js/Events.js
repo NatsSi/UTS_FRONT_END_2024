@@ -1,20 +1,22 @@
-const hamburger = document.querySelector(".hamburger");
-const navMenu = document.querySelector(".nav ul");
-const navLink = document.querySelectorAll(".nav a");
+// Load HTML function
 
-hamburger.addEventListener("click", mobileMenu);
-
-function mobileMenu() {
-    hamburger.classList.toggle("active");
-    navMenu.classList.toggle("active");
+function loadHTML(file, elementId) {
+    fetch(file)
+        .then(response => response.text())
+        .then(data => {
+            const element = document.getElementById(elementId);
+            if (element) {
+                element.innerHTML = data;
+            } else {
+                console.error(`Element with ID "${elementId}" not found.`);
+            }
+        })
+        .catch(error => console.error('Error loading HTML:', error));
 }
 
-navLink.forEach(n => n.addEventListener("click", closeMenu));
+loadHTML('Navbar.html', 'navbar');
+loadHTML('Footer.html', 'footer');;
 
-function closeMenu() {
-    hamburger.classList.remove("active");
-    navMenu.classList.remove("active");
-}
 
 let currentSlide = 0;
 const slides = document.querySelectorAll('.card');
