@@ -29,3 +29,17 @@ const active = function(entries){
 
 const io = new IntersectionObserver(active);
 items.forEach(item => io.observe(item));
+
+const items2 = document.querySelectorAll('.appear2');
+
+const active2 = function(entries){
+    entries.forEach(entry => {
+        if(entry.isIntersecting){
+        entry.target.classList.add('inview2'); 
+        }
+    });
+}
+const io2 = new IntersectionObserver(active2);
+ for(let i=0; i < items2.length; i++){
+    io2.observe(items2[i]);
+ }

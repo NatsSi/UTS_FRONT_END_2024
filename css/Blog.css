@@ -96,20 +96,25 @@ body {
 }
 
 .read-article-btn {
-    background-color: #445C3C;
-    color: #fff;
-    padding: 10px 20px;
+    background-color: #445C3C; /* Original dark green */
+    color: #fff; /* Text color */
+    padding: 10px 20px; /* Adjust padding */
     border: none;
     border-radius: 30px;
-    font-size: 16px;
+    font-size: 16px; /* Text size */
     cursor: pointer;
-    display: flex;
-    align-items: center;
+    transition: background-color 0.3s ease; /* Smooth hover effect */
+    display: inline-block; /* Ensure it's not stretching */
+}
+
+.read-article-btn:hover {
+    background-color: #5b6d38; /* Lighter green on hover */
 }
 
 .read-article-btn span {
     margin-left: 10px;
-    font-size: 18px;
+    font-size: 18px; /* Adjust if you have an icon or text */
+    vertical-align: middle; /* Ensure text or icon alignment */
 }
 
 /* Blog Section */
