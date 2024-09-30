@@ -159,7 +159,12 @@
       color: white;
       padding: 10px 20px;
       text-decoration: none;
-      border-radius: 5px;
+      border-radius: 25px;
+      transition: background-color 0.3s ease;
+  }
+
+  .access-course:hover {
+    background-color: #71893e;
   }
 
   .container-two .image-content {
