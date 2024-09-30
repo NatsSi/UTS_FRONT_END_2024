@@ -19,11 +19,12 @@
     align-items: flex-start;
     justify-content: space-between;
     padding: 2% 9% 2% 9%;
-    background-color: #f4f8e9;
     gap: 20px;
   }
   
   .hero-content {
+    position: sticky;
+    top: 1rem;
     width: 30%;
   }
   
@@ -158,6 +159,7 @@
     }
 
     .hero-content {
+      position: unset;
       width: 100%;
       text-align: center;
     }

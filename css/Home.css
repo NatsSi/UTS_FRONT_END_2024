@@ -293,6 +293,8 @@ body {
 }
 
 .feature-text {
+  position: sticky;
+  top: 1rem;
   max-width: 400px;
 }
 
@@ -630,6 +632,7 @@ button:hover {
   }
 
   .feature-text {
+    position: unset;
     width: 100%;
     text-align: center;
     margin-bottom: 20px;
