@@ -1,4 +1,5 @@
-function loadHTML(file, elementId, callback) {
+document.addEventListener('DOMContentLoaded', () => {
+    function loadHTML(file, elementId, callback) {
     fetch(file)
         .then(response => response.text())
         .then(data => {
@@ -21,4 +22,5 @@ loadHTML('Navbar.html', 'navbar', function() {
     } else {
         console.error("Hamburger or nav elements not found in the DOM.");
     }
-});
+
+})});

@@ -32,12 +32,10 @@ body {
     max-width: 500px;
     padding: 1rem;
     height: 200vh;
-    /* Tambahkan height jika perlu */
 }
 
 .recipes-belonging {
     top: 30px;
-    /* Coba kurangi jarak dari atas */
     position: sticky;
 }
 
@@ -47,6 +45,11 @@ body {
     align-items: center;
     margin-bottom: 60px;
     top: 20px;
+    transition: transform .3s ease-in-out;
+}
+
+.author-info:hover {
+    transform: scale(1.1);
 }
 
 .author-img {
@@ -75,6 +78,12 @@ body {
     border-radius: 10px;
     box-shadow: 10px 15px 20px rgba(0, 0, 0, 0.457);
     margin: 1rem 0;
+    transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+}
+
+.recipe-image img:hover {
+    transform: scale(.9);
+    box-shadow: 25px 30px 30px rgba(0, 0, 0, 0.5);
 }
 
 .left-content {
@@ -150,14 +159,20 @@ body {
     margin-bottom: 100px;
     background-color: white;
     display: inline-block;
-    box-sizing: border-box;
     width: 100%;
+    transition: box-shadow 0.2s ease-in-out;
+}
+
+.information-container:hover {
+    transform: scale(.6);
+    box-shadow: 20px 30px 30px rgba(0, 0, 0, 0.5);
 }
 
 .top-container {
     background-color: #4c6329;
     display: flex;
     width: 100%;
+    height: 60%;
     padding: 5% 10% 5% 10%;
     justify-content: space-between;
     box-sizing: border-box;
@@ -179,8 +194,10 @@ body {
     background-color: #dcecc4;
     display: flex;
     width: 100%;
+    height: 40%;
     padding: 5% 10% 5% 10%;
     justify-content: space-between;
+    align-items: center;
     box-sizing: border-box;
 }
 
@@ -216,6 +233,7 @@ body {
 }
 
 .ingredients-list {
+    padding: 5%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
@@ -225,16 +243,24 @@ body {
 .ingredients-item {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
-    width: 45%;
+    width: 40%;
+    height: 25vh;
+    transition: transform .3s ease-in-out, box-shadow .3s ease-in-out; 
 }
 
 .ingredients-item img {
-    width: 170px;
-    height: 170px;
+    width: 100%;
+    height: 80%;
     border-radius: 10px;
     margin-bottom: 10px;
+    position: relative;
+}
+
+.ingredients-item:hover {
+    transform: scale(.9);
+    box-shadow: 15px 20px 30px rgba(0, 0, 0, 0.5);
 }
 
 .instructions {
@@ -272,7 +298,7 @@ body {
 
     .right-content {
         margin-bottom: 40px;
-        height: 90vh;
+        height: 70vh;
     }
 
     .left-content {
@@ -280,8 +306,8 @@ body {
     }
 
     .recipe-image img {
-        width: 100%;
-        height: auto;
+        width: 80%;
+        height: 50%;
         border-radius: 10px;
     }
 
@@ -297,12 +323,21 @@ body {
     }
 
     .ingredients-list {
-        flex-direction: column;
+        padding: 15%;
         gap: 2rem;
+        align-items: center;
+        flex-wrap: wrap;
     }
 
     .ingredients-item {
+        width: 43%;
+        height: 20vh;
+        justify-content: flex-start;
+    }
+
+    .ingredients-item img {
         width: 100%;
+        height: 70%;
     }
 
     .instructions ol {
@@ -312,16 +347,12 @@ body {
         .top-container,
         .bottom-container {
             padding: 5% 5%;
-            /* Mengurangi padding di layar kecil */
             flex-direction: column;
-            /* Atur ulang agar elemen berjajar vertikal */
             align-items: center;
-            /* Pusatkan item jika perlu */
         }
     
         .information-container {
             height: auto;
-            /* Biarkan height menyesuaikan dengan konten */
         }
 }
 
@@ -330,21 +361,24 @@ body {
         padding: 10%;
         gap: 4rem;
     }
+
     .left-content {
-        width: 400px
+        width: 55%;
     }
 
     .ingredients-list {
         padding: 5%;
+        justify-content: center;
     }
 
     .ingredients-item {
-        width: 40%;
+        width: 10rem;
+        height: 20vh;
     }
 
     .ingredients-item img {
-        width: 100px;
-        height: 120px;
+        width: 70%;
+        height: 60%;
     }
 
     .ingredients-item span {
@@ -359,18 +393,34 @@ body {
         margin-bottom: 2rem;
     }
 
+    .information-container {
+        height: auto;
+    }
+
     .top-container {
         padding: 10%;
         gap: 10px;
     }
 
     .bottom-container {
-        padding: 5%;
+        padding: 3%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .recipes-belonging {
+        height: 70vh;
+    }
+
+    .recipe-image {
+        height: 45%;
+        width: 100%;
     }
 
     .recipe-image img {
         width: 100%;
-        height: auto;
+        height: 100%;
         border-radius: 10px;
     }
 }
@@ -399,7 +449,7 @@ body {
     }
     
     .left-content {
-        width: 400px
+        width: 100%;
     }
     
     .ingredients-list {
@@ -407,12 +457,13 @@ body {
     }
     
     .ingredients-item {
-        width: 40%;
+        width: 43%;
+        height: 100%;
     }
     
     .ingredients-item img {
-        width: 100px;
-        height: 120px;
+        width: 80%;
+        height: 150px;
     }
     
     .ingredients-item span {
@@ -440,15 +491,23 @@ body {
         padding: 3%;
     }
 
+    .recipes-belonging {
+        height: 100vh;
+    }
+
+    .recipe-image {
+        height: 90%;
+        width: 100%;
+    }
+
     .recipe-image img {
         width: 100%;
-        height: auto;
+        height: 70%;
         border-radius: 10px;
     }
 
     .information-container {
         height: auto;
-        /* Biarkan height menyesuaikan dengan konten */
     }
 }
 
