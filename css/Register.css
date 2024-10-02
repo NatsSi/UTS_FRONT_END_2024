@@ -58,13 +58,6 @@ p {
     box-shadow: 0 0 5px rgba(47, 67, 30, 0.5); 
 }
 
-.warning {
-    color: red;
-    font-size: 1em;
-    margin-top: 10px;
-    display: none; 
-}
-
 
 .get-started-btn {
     border-radius: 5px;
