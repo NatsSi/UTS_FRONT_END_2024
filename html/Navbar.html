@@ -1,8 +1,9 @@
 <head>
     <style>
-        *{
-            font-family: poppins;
+        * {
+            font-family: 'Poppins';
             text-decoration: none;
+            scroll-behavior: smooth;
         }
         .nav {
             position: relative;
@@ -49,6 +50,11 @@
             padding: 8px 15px;
             transition: color 0.3s ease, transform 0.3s ease;
         }
+
+        nav ul li a:hover {
+            color: #3a5233;
+            transform: scale(1.05);
+        }
         
         nav ul li a::before {
             content: "";
@@ -61,14 +67,20 @@
             transition: all 0.3s ease;
         }
         
-        nav ul li a:hover {
-            color: #3a5233;
-            transform: scale(1.05);
-        }
-        
         nav ul li a:hover::before {
             width: 100%;
             left: 0;
+        }
+
+        .active-nav::before {
+            content: "";
+            position: absolute;
+            bottom: 0;
+            width: 100%;
+            left: 0;
+            height: 2px;
+            background-color: #3a5233;
+            transition: all 0.3s ease;
         }
         
         nav ul li .subscribe {
@@ -135,15 +147,15 @@
 <div class="nav">
     <div class="logo">
         <a href="/html/Home.html">
-            <h1>Yoogy</h1>
+            <h1>Yogo</h1>
         </a>
     </div>
     <nav>
         <ul>
-            <li><a href="#">Yoga & Nutrition</a></li>
-            <li><a href="/html/Recipes.html">Recipes</a></li>
-            <li><a href="/html/Events.html">Events</a></li>
-            <li><a href="/html/Blog.html">Blog</a></li>
+            <li><a href="/html/Home.html" class="nav-link">Home</a></li>
+            <li><a href="/html/Recipes.html" class="nav-link">Recipes</a></li>
+            <li><a href="/html/Events.html" class="nav-link">Events</a></li>
+            <li><a href="/html/Blog.html" class="nav-link">Blog</a></li>
             <li><a href="/html/Register.html" class="subscribe">Subscribe</a></li>
         </ul>
         <div class="hamburger">

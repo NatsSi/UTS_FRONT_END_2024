@@ -154,7 +154,7 @@
       margin-bottom: 20px;
   }
 
-  .access-course {
+  .button-register {
       background-color: #4d6130;
       color: white;
       padding: 10px 20px;
@@ -163,7 +163,7 @@
       transition: background-color 0.3s ease;
   }
 
-  .access-course:hover {
+  .button-register:hover {
     background-color: #71893e;
   }
 

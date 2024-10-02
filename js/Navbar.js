@@ -23,4 +23,15 @@ loadHTML('Navbar.html', 'navbar', function() {
         console.error("Hamburger or nav elements not found in the DOM.");
     }
 
-})});
+    const navLinks = document.querySelectorAll('.nav-link');
+    const windowPathname = window.location.pathname;
+
+    navLinks.forEach(navLink => {
+        if (navLink.href.includes(windowPathname)) {
+            navLink.classList.add('active-nav')
+        } 
+    })
+
+})
+
+});
