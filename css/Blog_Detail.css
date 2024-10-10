@@ -157,6 +157,7 @@ p {
 
 .conclusion {
   margin-top: 3rem;
+  margin-bottom: 1rem;
   position: sticky;
   top: 1rem;
   flex: 0.3;

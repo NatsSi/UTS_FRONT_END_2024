@@ -405,6 +405,7 @@ body {
   'image-one image-two image-three'
   'image-four image-five image-six';
   gap: 20px;
+  margin-bottom: 2rem;
 }
 
 .image-one {grid-area: image-one;}

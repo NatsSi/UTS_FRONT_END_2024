@@ -15,55 +15,7 @@ function loadHTML(file, elementId) {
 }
 
 loadHTML('Navbar.html', 'navbar');
-loadHTML('Footer.html', 'footer');;
-
-
-let currentSlide = 0;
-const slides = document.querySelectorAll('.card');
-const dots = document.querySelectorAll('.dot');
-
-function showSlide(index) {
-    if (index >= slides.length) {
-        currentSlide = 0;
-    } else if (index < 0) {
-        currentSlide = slides.length - 1;
-    } else {
-        currentSlide = index;
-    }
-    
-    slides.forEach((slide, i) => {
-        slide.style.display = 'none';
-        dots[i].classList.remove('active');
-    });
-    slides[currentSlide].style.display = 'flex';
-    dots[currentSlide].classList.add('active');
-}
-
-function nextSlide() {
-    showSlide(currentSlide + 1);
-}
-
-function prevSlide() {
-    showSlide(currentSlide - 1);
-}
-
-// Add event listeners for navigation buttons
-function changeSlide(n) {
-    showSlide(currentSlide + n);
-}
-
-dots.forEach((dot, index) => {
-    dot.addEventListener('click', () => {
-        showSlide(index);
-    });
-});
-
-// Initialize slideshow
-showSlide(currentSlide);
-
-// Change slide every 5 seconds
-setInterval(nextSlide, 5000);
-
+loadHTML('Footer.html', 'footer');
 
 const items = document.querySelectorAll('.appear');
 
@@ -134,3 +86,68 @@ const io5 = new IntersectionObserver(active5);
  for(let i=0; i < items5.length; i++){
     io5.observe(items5[i]);
  }
+
+let currentSlide = 0;
+const slides = document.querySelectorAll('.card');
+const dots = document.querySelectorAll('.dot');
+
+function showSlide(index) {
+    if (index >= slides.length) {
+        currentSlide = 0;
+    } else if (index < 0) {
+        currentSlide = slides.length - 1;
+    } else {
+        currentSlide = index;
+    }
+    
+    slides.forEach((slide, i) => {
+        slide.style.display = 'none';
+        dots[i].classList.remove('active');
+    });
+    slides[currentSlide].style.display = 'flex';
+    dots[currentSlide].classList.add('active');
+}
+
+function nextSlide() {
+    showSlide(currentSlide + 1);
+}
+
+function prevSlide() {
+    showSlide(currentSlide - 1);
+}
+
+// Add event listeners for navigation buttons
+function changeSlide(n) {
+    showSlide(currentSlide + n);
+}
+
+dots.forEach((dot, index) => {
+    dot.addEventListener('click', () => {
+        showSlide(index);
+    });
+});
+
+// Initialize slideshow
+showSlide(currentSlide);
+
+// Change slide every 5 seconds
+setInterval(nextSlide, 5000);
+
+function searchEvents() {
+    var input, filter, a, i, txtValue;
+    input = document.getElementById("search");
+    filter = input.value.toUpperCase();
+    event_cards = document.getElementById("event-cards");
+    event_card = event_cards.getElementsByClassName("event-card");
+    for (i = 0; i < event_card.length; i++) {
+        event_info = event_card[i].getElementsByTagName("div")[1];
+        console.log(event_info);
+        a = event_info.getElementsByTagName("div")[1];
+        txtValue = a.innerHTML;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            event_card[i].style.display = "";
+        } else {
+            event_card[i].style.display = "none";
+        }
+    }
+}

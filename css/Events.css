@@ -11,7 +11,7 @@
     background-color: #fff;
     line-height: 1.5;
   }
-  
+
   .container-one {
     display: flex;
     align-items: center;
@@ -256,6 +256,20 @@
       margin-bottom: 10px;
   }
 
+  /*Search*/
+  #search {
+    background-image: url('/images/loupe.png');
+    background-size: 25px;
+    background-position: 10px 12px;
+    background-repeat: no-repeat;
+    width: 100%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #445C3C;
+    margin-bottom: 12px;
+  }
+
+
   .event-cards {
       display: flex;
       justify-content: space-between;
@@ -269,6 +283,7 @@
       overflow: hidden;
       width: 30%;
       position: relative;
+      display: block;
   }
 
   .event-card img {
