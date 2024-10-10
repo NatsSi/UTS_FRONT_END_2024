@@ -43,3 +43,21 @@ const io2 = new IntersectionObserver(active2);
  for(let i=0; i < items2.length; i++){
     io2.observe(items2[i]);
  }
+
+ function searchEvents() {
+    var input, filter, blogBox, i, txtValue;
+    input = document.getElementById("search");
+    filter = input.value.toUpperCase();
+    blogContainer = document.getElementsByClassName("blog-container")[0];
+    blogBox = blogContainer.getElementsByClassName("blog-box");
+
+    for (i = 0; i < blogBox.length; i++) {
+        blogTitle = blogBox[i].getElementsByClassName("blog-title")[0];
+        txtValue = blogTitle.textContent || blogTitle.innerText;
+        if (txtValue.toUpperCase().indexOf(filter) > -1) {
+            blogBox[i].style.display = "";
+        } else {
+            blogBox[i].style.display = "none";
+        }
+    }
+}

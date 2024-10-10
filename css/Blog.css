@@ -96,32 +96,45 @@ body {
 }
 
 .read-article-btn {
-    background-color: #445C3C; /* Original dark green */
-    color: #fff; /* Text color */
-    padding: 10px 20px; /* Adjust padding */
+    background-color: #445C3C;  
+    color: #fff; 
+    padding: 10px 20px; 
     border: none;
     border-radius: 30px;
-    font-size: 16px; /* Text size */
+    font-size: 16px; 
     cursor: pointer;
-    transition: background-color 0.3s ease; /* Smooth hover effect */
-    display: inline-block; /* Ensure it's not stretching */
+    transition: background-color 0.3s ease; 
+    display: inline-block; 
 }
 
 .read-article-btn:hover {
-    background-color: #5b6d38; /* Lighter green on hover */
+    background-color: #5b6d38; 
 }
 
 .read-article-btn span {
     margin-left: 10px;
-    font-size: 18px; /* Adjust if you have an icon or text */
-    vertical-align: middle; /* Ensure text or icon alignment */
+    font-size: 18px; 
+    vertical-align: middle; 
 }
 
 /* Blog Section */
 
+  #search {
+    background-image: url('/images/loupe.png');
+    background-size: 25px;
+    background-position: 10px 12px;
+    background-repeat: no-repeat;
+    width: 69%;
+    font-size: 16px;
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #445C3C;
+    margin-bottom: 12px;
+    margin-top: 5px;
+  }
+
 #blog{
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-direction: column;
     padding: 40px;
@@ -231,6 +244,7 @@ body {
       }
     }
   }
+  
 
 /* Animations */
 
@@ -246,7 +260,7 @@ body {
 }
 .hero-section {
     text-align: center;
-    padding: 100px 20px; /* Increased top padding */
+    padding: 100px 20px; 
     background-color: #FDFDFB;
 }
 
