@@ -4,7 +4,8 @@ submitButton.addEventListener("click", function () {
     const selectedPaymentMethod = document.querySelector('input[name="payment"]:checked');
 
     if (selectedPaymentMethod) {
-        window.location.href = "setiawan noob";
+        localStorage.setItem("registered", "true");
+        window.location.href = "Home_2.html";
     } else {
         alert("Please select a payment method before proceeding.");
     }
