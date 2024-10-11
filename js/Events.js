@@ -143,7 +143,6 @@ function searchEvents() {
     event_card = event_cards.getElementsByClassName("event-card");
     for (i = 0; i < event_card.length; i++) {
         event_info = event_card[i].getElementsByTagName("div")[1];
-        console.log(event_info);
         a = event_info.getElementsByTagName("div")[1];
         txtValue = a.innerHTML;
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
