@@ -17,6 +17,7 @@ function loadHTML(file, elementId) {
 loadHTML('Navbar.html', 'navbar');
 loadHTML('Footer.html', 'footer');
 
+// Animation fade in
 const items = document.querySelectorAll('.appear');
 
 const active = function(entries){
@@ -133,6 +134,7 @@ showSlide(currentSlide);
 // Change slide every 5 seconds
 setInterval(nextSlide, 5000);
 
+// Search
 function searchEvents() {
     var input, filter, a, i, txtValue;
     input = document.getElementById("search");

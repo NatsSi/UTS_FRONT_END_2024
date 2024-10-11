@@ -13,30 +13,30 @@ body {
   line-height: 1.5;
 }
 
-.hero {
+#hero {
   display: flex;
   justify-content:space-between;
   align-items: center;
   padding: 5% 9% 0% 9%;
 }
 
-.content {
+#content {
   max-width: 700px;
 }
 
-.content h2 {
+#content h2 {
   font-size: 48px;
   margin-bottom: 20px;
   color: #3a5233;
 }
 
-.content p {
+#content p {
   font-size: 24px;
   margin-bottom: 30px;
   color: #6d6d6d;
 }
 
-.button-register-1 {
+#button-register-1 {
   display: inline-block;
   padding: 10px 20px;
   background-color: #3a5233;
@@ -46,12 +46,12 @@ body {
   transition: background-color 0.3s ease, transform 0.3s ease;
 }
 
-.button-register-1:hover {
+#button-register-1:hover {
   background-color: #556B2F;
   transform: scale(1.05);
 }
 
-.hero .hero-image img {
+#hero #hero-image-1 img {
   width: 100%;
   max-height: 500px;
   min-height: 300px;
@@ -60,7 +60,7 @@ body {
   border-radius: 25px;
 }
 
-.services {
+#services {
   padding: 5% 9% 5% 9%;
 }
 
@@ -86,7 +86,7 @@ body {
   color: #6d6d6d;
 }
 
-.services-grid {
+#services-grid {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
   grid-template-areas: 
@@ -137,12 +137,12 @@ body {
   background: rgba(0, 0, 0, 0.3);
 }
 
-.well-being {
+#well-being {
   padding: 2% 9% 2% 9%;
   background-color:#eaece6;
 }
 
-.content-wrapper {
+#content-wrapper {
   display: flex;
   align-items: flex-start;
   justify-content: space-between;
@@ -150,28 +150,28 @@ body {
   position: relative;
 }
 
-.left-content {
+#left-content {
   max-width: 50%;
 }
 
-.left-content h3 {
+#left-content h3 {
   color: #71893e;
   font-size: 18px;
   font-weight: bold;
   margin-bottom: 10px;
 }
 
-.left-content h2 {
+#left-content h2 {
   color: #3a5233;
   font-size: 36px;
 }
 
-.left-content p {
+#left-content p {
   color: #6d6d6d;
   margin-bottom: 20px;
 }
 
-.left-content .service-item {
+#left-content .service-item {
   display: flex;
   align-items: flex-start;
   margin-bottom: 30px;
@@ -219,13 +219,13 @@ body {
   transform: scale(1.05);
 }
 
-.right-content {
+#right-content {
   height: 100%;
   display: inline-block;
   vertical-align: middle;
 }
 
-.right-content img {
+#right-content img {
   width: 50%;
   max-height: 500px;
   min-height: 300px;
@@ -239,34 +239,34 @@ body {
   margin-bottom: auto;
 }
 
-.events_retreats {
+#events_retreats {
   text-align: center;
   padding: 5% 9% 5% 9%;
   background-color: #f0f0f0;
 }
 
-.content-text h1 {
+#content-text h1 {
   color: #71893e;
   width: 300px;
   line-height: normal;
   margin: 0px auto 25px auto;
 }
 
-.content-text h2 {
+#content-text h2 {
   color: #2F4F4F;
   width: 300px;
   line-height: normal;
   margin: 0px auto 25px auto;
 }
 
-.content-text p {
+#content-text p {
   margin: 0px auto 50px auto;
   width: 700px;
   font-size: 20px;
   line-height: normal;
 }
 
-.events_retreats .hero-image {
+#events_retreats #hero-image-2 {
   object-fit: cover;
   display: block;
   margin-left: auto;
@@ -280,12 +280,12 @@ body {
   border-radius: 10px;
 }
 
-.events_retreats .hero-image:hover {
-  transform: scale(1.01);
+#events_retreats #hero-image-2:hover {
+  transform: scale(1.05);
 }
 
 /* Retreat Details */
-.retreat-details {
+#retreat-details {
   display: flex;
   justify-content: space-around;
   padding: 20px;
@@ -298,7 +298,7 @@ body {
   transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
-.pricing {
+#pricing {
   display: flex;
   align-items: flex-start;
   justify-content: space-around;
@@ -307,21 +307,21 @@ body {
   padding: 5% 9% 5% 9%;
 }
 
-.feature-text {
+#feature-text {
   position: sticky;
   top: 1rem;
   max-width: 400px;
 }
 
-.feature-text h2 {
+#feature-text h2 {
   color: #71893e;
 }
 
-.feature-text p {
+#feature-text p {
   color: #2F4F4F;
 }
 
-.pricing-cards {
+#pricing-cards {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-areas: 
@@ -386,18 +386,18 @@ body {
   background-color: #6f7d45;
 }
 
-.footer {
+#share-moments {
   text-align: center;
 }
 
-.share-moments h1 {
+#share-moments h1 {
   color: #71893e;
   font-size: 2rem;
   margin-bottom: 20px;
 }
 
 
-.gallery {
+#gallery {
   padding: 0% 9% 0% 9%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
@@ -533,7 +533,7 @@ button:hover {
 }
 
 @media (max-width: 1420px) {
-  .services-grid {
+  #services-grid {
     grid-template-areas: 
     'one one two two three three'
     'four four five five six six';
@@ -542,15 +542,15 @@ button:hover {
 
 
 @media (max-width: 1024px) {
-  .content h2 {
+  #content h2 {
     font-size: 36px;
   }
 
-  .content p {
+  #content p {
     font-size: 20px;
   }
 
-  .services-grid {
+  #services-grid {
     grid-template-areas: 
     'one one two two three three'
     'four four five five six six';
@@ -562,33 +562,33 @@ button:hover {
     font-weight: bold;
   }
 
-  .feature-text {
+  #feature-text {
     max-width: 200px;
   }
 }
 
 @media (max-width: 768px) {
 
-  .hero {
+  #hero {
     display:block;
   }
 
-  .content {
+  #content {
     text-align: center;
     margin-bottom: 20px;
   }
 
-  .content h2 {
+  #content h2 {
     font-size: 36px;
     margin-bottom: 10px;
   }
 
-  .content p {
+  #content p {
     font-size: 20px;
     margin-bottom: 15px;
   }
 
-  .services-grid {
+  #services-grid {
     grid-template-columns: 1fr;
     grid-template-areas: 
     'one'
@@ -603,26 +603,26 @@ button:hover {
     text-align: center;
   }
 
-  .well-being {
+  #well-being {
     padding-top: 50px;
     padding-bottom: 50px;
   }
 
-  .content-wrapper {
+  #content-wrapper {
     display: unset;
   }
 
-  .left-content .service-item {
+  #left-content .service-item {
     display: unset;
   }
 
-  .left-content {
+  #left-content {
     max-width: 100%;
     text-align: center;
     margin-bottom: 20px;
   }
 
-  .right-content img {
+  #right-content img {
     position: unset;
     width: 100%;
     max-height: 500px;
@@ -631,15 +631,15 @@ button:hover {
     object-position: bottom;
   }
 
-  .content-text {
+  #content-text {
     text-align: center;
   }
 
-  .content-text p {
+  #content-text p {
     width: 100%;
   }
   
-  .retreat-details {
+  #retreat-details {
     display: block;
   }
 
@@ -647,11 +647,11 @@ button:hover {
     width: 100%;
   }
 
-  .pricing {    
+  #pricing {    
     display: block;
   }
 
-  .feature-text {
+  #feature-text {
     max-width: 600px;
     position: unset;
     width: 100%;
@@ -661,7 +661,7 @@ button:hover {
     margin-right: auto;
   }
 
-  .pricing-cards {
+  #pricing-cards {
     grid-template-columns: 1fr;
     grid-template-areas: 
       'card-one' 
@@ -677,11 +677,11 @@ button:hover {
     padding-bottom: 3.5em;
   }
 
-  .share-moments h1 {
+  #share-moments h1 {
     font-size: 1.5rem;
   }
 
-  .gallery {
+  #gallery {
     grid-template-columns: 1fr;
     grid-template-areas: 
     'image-one'

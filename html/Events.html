@@ -9,31 +9,28 @@
 <body>
     <div id="navbar"></div>
 
-      <div class="container-one">
-        <div class="text-content appear">
+      <div id="container-one">
+        <div id="text-content" class="appear">
             <h1>For a better connection</h1>
             <p>We offer a holistic program that allows you to live incredible experiences and builds you up for a better life, merging the benefits of yoga for a deep transformation of body, mind and soul.</p>
         </div>
 
-        <div class="image-content appear">
-            <div class="retirement-label">
-                <h4>Retirement in Tunisie</h4>
-            </div>
+        <div id="image-content-1" class="appear">
+            <h4>Retirement in Tunisie</h4>
             <img src="../images/crystalweed-cannabis-iXpuwXVuz8E-unsplash.jpg" alt="Spa Bath">
         </div>
       </div>
 
-      <div class="container-two">
-        <!-- Header Section -->
-        <div class="header-one appear2">
+      <div id="container-two">
+        <div id="header-one" class="appear2">
             <div class="highlight-text">THIS WEEK</div>
             <h1>Don't miss your appointment</h1>
             <p>Your event of the moment is there do not hesitate to book your seats.</p>
         </div>
 
-        <!-- Card Section -->
-         <!-- Slideshow Section -->
-         <section class="slider appear2">
+        <!-- Slideshow -->
+         <section id="slider" class="appear2">
+          <!-- Card 1 -->
           <div class="card active-slide">
             <div class="course-info">
                 <h2>Reconnection</h2>
@@ -49,7 +46,7 @@
               </div>
           </div>
 
-          <!-- You can add more slides here -->
+          <!-- Card 2 -->
           <div class="card">
                 <div class="course-info">
                     <h2>Tadasana</h2>
@@ -65,21 +62,18 @@
               </div>
           </div>
           <!-- Add navigation buttons -->
-        <div class="arrows">
-            <a class="prev" onclick="changeSlide(-1)">❮</a>
-            <a class="next" onclick="changeSlide(1)">❯</a>
-        </div>
+            <a id="prev" onclick="changeSlide(-1)">❮</a>
+            <a id="next" onclick="changeSlide(1)">❯</a>
       </section>
     
-      <div class="navigation appear2">
+      <div id="navigation" class="appear2">
           <div class="dot active"></div>
           <div class="dot"></div>
       </div>
     </div>
 
-    <div class="container-three">
-      <!-- Header Section -->
-      <div class="header-two appear3">
+    <div id="container-three">
+      <div id="header-two" class="appear3">
           <div class="highlight-text">TO COME</div>
           <h1>It might be interesting for you</h1>
           <p>We offer a holistic program that allows you to live incredible experiences and builds you up for a better life, merging the benefits of yoga for a deep transformation of body, mind, and soul.</p>
@@ -87,8 +81,8 @@
 
         <input type="text" id="search" onkeyup="searchEvents()" placeholder="Search Events">
 
-      <!-- Event Cards Section -->
-      <div class="event-cards appear3" id="event-cards">
+      <!-- Event Cards -->
+      <div class="appear3" id="event-cards">
           <!-- Card 1 -->
           <div class="event-card appear4">
               <img src="../images/chermiti-mohamed-fk5RgUiYpVw-unsplash.jpg" alt="Tunis Image">

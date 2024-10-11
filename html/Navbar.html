@@ -5,7 +5,7 @@
             text-decoration: none;
             scroll-behavior: smooth;
         }
-        .nav {
+        #nav {
             position: relative;
             display: flex;
             justify-content: space-between;
@@ -14,7 +14,7 @@
             z-index: 1000;
         }
 
-        .hamburger {
+        #hamburger {
             display: none;
         }
 
@@ -27,7 +27,7 @@
             background-color: #101010;
         }
 
-        .logo h1 {
+        #logo h1 {
             font-size: 24px;
             color: #5b6d38;
         }
@@ -86,7 +86,7 @@
 
         @media (max-width: 768px) {
 
-        .nav ul {
+        nav ul {
             position: fixed;
             left: -100%;
             top: 3rem;
@@ -100,28 +100,28 @@
             padding-bottom: 40px;
         }
 
-        .nav ul.active {
+        nav ul.active {
             left: 0;
         }
 
-        .nav li {
+        nav li {
             margin: 0.05rem 0;
         }
 
-        .hamburger {
+        #hamburger {
             display: block;
             cursor: pointer;
         }
 
-        .hamburger.active .bar:nth-child(2) {
+        #hamburger.active .bar:nth-child(2) {
             opacity: 0;
         }
 
-        .hamburger.active .bar:nth-child(1) {
+        #hamburger.active .bar:nth-child(1) {
             transform: translateY(8px) rotate(45deg);
         }
 
-        .hamburger.active .bar:nth-child(3) {
+        #hamburger.active .bar:nth-child(3) {
             transform: translateY(-8px) rotate(-45deg);
         }
 
@@ -131,8 +131,8 @@
 
 <link rel="stylesheet" href="../css/Navbar.css" class="">
 <link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
-<div class="nav">
-    <div class="logo">
+<div id="nav">
+    <div id="logo">
         <a href="/html/Home.html">
             <h1>Yogo</h1>
         </a>
@@ -146,7 +146,7 @@
             <li><a href="/html/Login.html" class="nav-link subscribe">Login</a></li>
             <li><a href="/html/Register.html" class="nav-link subscribe">Subscribe</a></li>
         </ul>
-        <div class="hamburger">
+        <div id="hamburger">
             <span class="bar"></span>
             <span class="bar"></span>
             <span class="bar"></span>

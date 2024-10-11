@@ -1,5 +1,4 @@
 // Load HTML function
-
 function loadHTML(file, elementId) {
     fetch(file)
         .then(response => response.text())
@@ -17,6 +16,7 @@ function loadHTML(file, elementId) {
 loadHTML('Navbar.html', 'navbar');
 loadHTML('Footer.html', 'footer');
 
+// Animation fade in
 const items = document.querySelectorAll('.appear');
 
 const active = function(entries){

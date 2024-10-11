@@ -11,8 +11,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Load navbar and footer
 loadHTML('Navbar.html', 'navbar', function() {
-    const hamburger = document.querySelector(".hamburger");
-    const navMenu = document.querySelector(".nav ul");
+    const hamburger = document.querySelector("#hamburger");
+    const navMenu = document.querySelector("#nav ul");
 
     if (hamburger && navMenu) {
         hamburger.addEventListener("click", function() {

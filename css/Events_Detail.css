@@ -12,8 +12,7 @@
     line-height: 1.5;
   }
 
-/* Hero Section */
- .hero {
+ #hero {
     height: 100%;
     display: flex;
     align-items: flex-start;
@@ -22,25 +21,25 @@
     gap: 20px;
   }
   
-  .hero-content {
+  #hero-content {
     position: sticky;
     top: 1rem;
     width: 30%;
   }
   
-  .hero-content h1 {
+  #hero-content h1 {
     font-size: 36px;
     color: #2f431e;
     margin-bottom: 20px;
   }
   
-  .hero-content p {
+  #hero-content p {
     font-size: 20px;
     color: #555;
     margin-bottom: 20px;
   }
   
-  .profile-section {
+  #profile-section {
     display: flex;
   }
   
@@ -57,20 +56,20 @@
   }
   
   /* Form */
-  .hero-form form {
+  #hero-form form {
     display: flex;
     flex-direction: column;
     width: 250px;
   }
   
-  .hero-form input, .hero-form textarea {
+  #hero-form input, #hero-form textarea {
     margin-bottom: 10px;
     padding: 10px;
     border: 1px solid #ddd;
     border-radius: 4px;
   }
   
-  .hero-form button {
+  #hero-form button {
     padding: 10px;
     background-color: #000;
     color: #fff;
@@ -78,15 +77,15 @@
     cursor: pointer;
   }
   
-  .hero-form button:hover {
+  #hero-form button:hover {
     background-color: #333;
   }
 
-  .image-content {
+  #image-content {
     position: relative;
   }
 
-  .image-content img {
+  #image-content img {
     max-height: 300px;
     min-height: 200px;
     width: 100%;
@@ -96,7 +95,7 @@
     margin-bottom: 20px;
   }
 
-  .retirement-label {
+  #retirement-label {
     position: absolute;
     right: 0;
     width: 100%;
@@ -112,37 +111,37 @@
     font-size: 1rem;
   } 
 
-  .content-header {
+  #content-header {
     width: 100%;;
   }
   
-  .content-header h2 {
+  #content-header h2 {
     font-size: 36px;
     color: #2f431e;
     margin-bottom: 20px;
   }
   
-  .content-header p {
+  #content-header p {
     font-size: 20px;
     color: #555;
   }
 
   @media (max-width: 1024px) {
-    .hero {
+    #hero {
       flex-direction: column;
     }
 
-    .hero-content {
+    #hero-content {
       position: unset;
       width: 100%;
       text-align: center;
     }
 
-    .hero-content h1 {
+    #hero-content h1 {
       font-size: 30px;
     }
 
-    .profile-section {
+    #profile-section {
       width: 100%;
     }
 
@@ -151,7 +150,7 @@
       justify-content: center;
     }
 
-    .hero-form form {
+    #hero-form form {
       width: 100%;
     }
   }
