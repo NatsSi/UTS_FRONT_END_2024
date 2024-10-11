@@ -5,7 +5,7 @@ submitButton.addEventListener("click", function () {
 
     if (selectedPaymentMethod) {
         localStorage.setItem("registered", "true");
-        window.location.href = "Home_2.html";
+        window.location.href = "login.html";
     } else {
         alert("Please select a payment method before proceeding.");
     }
